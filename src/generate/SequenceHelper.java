@@ -6,24 +6,6 @@ import java.util.Random;
 
 public class SequenceHelper {
 
-    public static String generateSequence(ArrayList<BaseOption> baseOptions) {
-
-        StringBuilder sequence = new StringBuilder();
-        BaseOption randomOption;
-        Random r = new Random();
-
-        while (baseOptions.size() > 0) {
-            int optionPos = r.nextInt(baseOptions.size());
-            randomOption = baseOptions.get(optionPos);
-            sequence.append(randomOption.getPattern());
-            randomOption.decreaseNum();
-            if (randomOption.getNum() <= 0) {
-                baseOptions.remove(optionPos);
-            }
-        }
-        return sequence.toString();
-    }
-
     public static ArrayList<String> split(int min, int max, String sequence, int coverage) {
 
         ArrayList<String> MainResult = new ArrayList<>();
