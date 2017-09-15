@@ -20,7 +20,7 @@
 // 
 // http://opensource.org/licenses/MIT
 
-package com.philiphubbard.digraph;
+package digraph;
 
 import org.apache.hadoop.io.BytesWritable;
 

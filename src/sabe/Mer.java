@@ -20,7 +20,7 @@
 // 
 // http://opensource.org/licenses/MIT
 
-package com.philiphubbard.sabe;
+package sabe;
 
 // Utility routines for converting a k-mer string into a numerical index
 // and vice-versa.  Since a k-mer can contain only the characters "A", "C",

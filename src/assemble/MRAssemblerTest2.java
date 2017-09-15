@@ -20,7 +20,7 @@
 // 
 // http://opensource.org/licenses/MIT
 
-package generate;
+package assemble;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -36,7 +36,7 @@ import org.apache.hadoop.fs.FSDataOutputStream;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.Text;
 
-import com.philiphubbard.sabe.MRAssembler;
+import sabe.MRAssembler;
 
 // A sample driver application for running the MRAssembler class with Hadoop.
 // The test data in this case is a larger set of reads, containing errors and

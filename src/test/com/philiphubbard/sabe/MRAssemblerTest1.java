@@ -34,7 +34,7 @@ import org.apache.hadoop.fs.FSDataOutputStream;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.Text;
 
-import com.philiphubbard.sabe.MRAssembler;
+import sabe.MRAssembler;
 
 // A sample driver application for running the MRAssembler class with Hadoop.
 // The test data in this case is a simple set of short reads, with no errors

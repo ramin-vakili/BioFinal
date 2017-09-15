@@ -20,7 +20,7 @@
 // 
 // http://opensource.org/licenses/MIT
 
-package com.philiphubbard.sabe;
+package sabe;
 
 import java.io.IOException;
 
@@ -29,8 +29,8 @@ import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.BytesWritable;
 import org.apache.hadoop.mapreduce.Job;
 
-import com.philiphubbard.digraph.MRCompressChains;
-import com.philiphubbard.digraph.MRVertex;
+import digraph.MRCompressChains;
+import digraph.MRVertex;
 
 // A class derived from digraph.MRCompressChains, specializing that class'
 // mapper and reducer to create instances of the MRMerVertex class, derived

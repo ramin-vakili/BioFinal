@@ -24,7 +24,7 @@ package test.com.philiphubbard.sabe;
 
 import java.util.ArrayList;
 
-import com.philiphubbard.sabe.BasicAssembler;
+import sabe.BasicAssembler;
 
 // Confidence tests for the BasicAssembler class.
 // Uses assert(), so must be run with a run configuration that includes "-ea" in the 

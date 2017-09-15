@@ -26,9 +26,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import com.philiphubbard.digraph.BasicDigraph;
-import com.philiphubbard.digraph.Digraph;
-import com.philiphubbard.sabe.Repeats;
+import digraph.BasicDigraph;
+import digraph.Digraph;
+import sabe.Repeats;
 
 public class RepeatsTest {
 	

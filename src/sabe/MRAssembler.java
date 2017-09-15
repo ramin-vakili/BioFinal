@@ -20,7 +20,7 @@
 // 
 // http://opensource.org/licenses/MIT
 
-package com.philiphubbard.sabe;
+package sabe;
 
 import java.io.IOException;
 import java.util.ArrayDeque;
@@ -37,12 +37,12 @@ import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.SequenceFile;
 import org.apache.hadoop.mapreduce.Job;
 
-import com.philiphubbard.digraph.BasicDigraph;
-import com.philiphubbard.digraph.Digraph;
-import com.philiphubbard.digraph.EulerPaths;
-import com.philiphubbard.digraph.MRBuildVertices;
-import com.philiphubbard.digraph.MRCompressChains;
-import com.philiphubbard.digraph.MRVertex;
+import digraph.BasicDigraph;
+import digraph.Digraph;
+import digraph.EulerPaths;
+import digraph.MRBuildVertices;
+import digraph.MRCompressChains;
+import digraph.MRVertex;
 
 // A class to assemble genomic sequences from a list of "reads" using
 // MapReduce (MR) algorithms implemented in Hadoop to improve performance.

@@ -20,7 +20,7 @@
 // 
 // http://opensource.org/licenses/MIT
 
-package com.philiphubbard.digraph;
+package digraph;
 
 import java.io.IOException;
 import java.util.Random;

@@ -5,14 +5,14 @@
  */
 package ui;
 
-import generate.SequenceHelper;
+import assemble.SequenceHelper;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.logging.Handler;
-import generate.Assemble;
+import assemble.Assemble;
 
 import org.apache.hadoop.io.Text;
 import org.apache.log4j.helpers.AbsoluteTimeDateFormat;

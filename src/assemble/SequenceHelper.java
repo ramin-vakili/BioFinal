@@ -1,4 +1,4 @@
-package generate;
+package assemble;
 
 import java.util.ArrayList;
 import java.util.Random;

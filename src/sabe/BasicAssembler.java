@@ -20,14 +20,14 @@
 // 
 // http://opensource.org/licenses/MIT
 
-package com.philiphubbard.sabe;
+package sabe;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 
-import com.philiphubbard.digraph.BasicDigraph;
-import com.philiphubbard.digraph.Digraph;
-import com.philiphubbard.digraph.EulerPaths;
+import digraph.BasicDigraph;
+import digraph.Digraph;
+import digraph.EulerPaths;
 
 // A class to assemble genomic sequences from a list of "reads".
 // The algorithm breaks each read string into substrings of length

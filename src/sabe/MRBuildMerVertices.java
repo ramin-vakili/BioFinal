@@ -20,7 +20,7 @@
 // 
 // http://opensource.org/licenses/MIT
 
-package com.philiphubbard.sabe;
+package sabe;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -30,8 +30,8 @@ import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
 
-import com.philiphubbard.digraph.MRBuildVertices;
-import com.philiphubbard.digraph.MRVertex;
+import digraph.MRBuildVertices;
+import digraph.MRVertex;
 
 // A class derived from digraph.MRBuildVertices, specializing that class's
 // mapper to build instances of the MRMerVertex class, derived from MRVertex.

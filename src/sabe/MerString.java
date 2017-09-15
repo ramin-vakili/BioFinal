@@ -20,7 +20,7 @@
 // 
 // http://opensource.org/licenses/MIT
 
-package com.philiphubbard.sabe;
+package sabe;
 
 // A class to support the merging of Mer instances.
 // A MerString can be built from a Mer instance, and then it can be

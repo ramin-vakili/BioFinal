@@ -22,8 +22,8 @@
 
 package test.com.philiphubbard.sabe;
 
-import com.philiphubbard.sabe.Mer;
-import com.philiphubbard.sabe.MerString;
+import sabe.Mer;
+import sabe.MerString;
 
 // Confidence tests for the MerString class.
 // Uses assert(), so must be run with a run configuration that includes "-ea" in the 

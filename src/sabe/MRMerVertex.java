@@ -20,12 +20,12 @@
 // 
 // http://opensource.org/licenses/MIT
 
-package com.philiphubbard.sabe;
+package sabe;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.io.BytesWritable;
 
-import com.philiphubbard.digraph.MRVertex;
+import digraph.MRVertex;
 
 // A version of MRVertex that stores MerString instances.  Thus, on the
 // assumption that the IDs of the vertices encode (k-1)-mers via the

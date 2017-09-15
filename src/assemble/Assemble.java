@@ -1,4 +1,4 @@
-package generate;
+package assemble;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -12,7 +12,7 @@ import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.Text;
 
-import com.philiphubbard.sabe.MRAssembler;
+import sabe.MRAssembler;
 
 public class Assemble extends Thread {
 	

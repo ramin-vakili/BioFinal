@@ -20,11 +20,11 @@
 // 
 // http://opensource.org/licenses/MIT
 
-package com.philiphubbard.sabe;
+package sabe;
 
 import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.io.IOException; 
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 import org.apache.hadoop.conf.Configuration;
@@ -35,11 +35,10 @@ import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.Text;
 
 // A sample driver application for running the MRAssembler class with Hadoop.
-// The test data in this case is a larger set of reads, containing errors and
-// repetitive sections repeated once ("single repeats"), and a goal that is 
-// a longer sequence.
+// The test data in this case is a simple set of short reads, with no errors
+// or repetitive sections, yielding a final sequence that is pretty short.
 
-public class MRAssemblerTest2 {
+public class MRAssemblerTest1 {
 	
 	public static void main(String[] args) 
 			throws IOException, ClassNotFoundException, InterruptedException {
@@ -51,7 +50,7 @@ public class MRAssemblerTest2 {
 		assembler.run(new Path(testInput), new Path(testOutput));
 		
 		verifyTest(conf);
-		cleanupTest(conf);
+		//cleanupTest(conf);
 		
 		System.exit(0);
 	}
@@ -65,52 +64,28 @@ public class MRAssemblerTest2 {
 		
 		ArrayList<Text> reads = new ArrayList<Text>();
 		
-		// The expected result:
-		// CCCTTTCTGTTGACCCATCATTGTTTAGTAACCCGCGGGATGCCTGGCAGACCCGCGGGACGATCTCCTCTGACCCATCATCGAAATTCC
-		// Note that it has the following pattern:
-		// segment 0: CCCTTTCTGT 
-		// segment 1, which will be repeated: TGACCCATCA 
-		// segment 2: TTGTTTAGTA 
-		// segment 3, which will be repeated: ACCCGCGGGA 
-		// segment 4: TGCCTGGCAG 
-		// segment 3, again: ACCCGCGGGA 
-		// segment 5: CGATCTCCTC
-		// segment 1, again: TGACCCATCA 
-		// segment 6: TCGAAATTCC
+		// Goal: AATTCGGCCTTCGGCAT
+		//       AATTCGGCCTTCGGCAT
 
-		reads.add(new Text("CCCTTTC\n"));
-		// Error: initial T omitted.
-		reads.add(new Text("GTTGACCCATCATTGTTTAGTAACCCGCGGGATGCCTGGCAGACC"));
-		reads.add(new Text("CGCGGGACGAT\n"));
-		// Error: final C omitted.
-		reads.add(new Text("CTCCTCTGACCCATCATCGAAATTC\n"));
-
+		reads.add(new Text("AATTCGGC\n"));
+		reads.add(new Text("CTTCGGCAT\n"));
 		
-		reads.add(new Text("CCCTTTCTGTTGACCCAT\n"));
-		// Error: final C replaced with G.
-		reads.add(new Text("CATTGTTTAGTAACCCGCGGGATGCCTGGCAGACG\n"));
-		reads.add(new Text("CGCGGGACGATCTCCTCTGACCCATCATCGAAATTCC\n"));
-
+		reads.add(new Text("AATT\n"));
+		reads.add(new Text("CGGCCTTCGGCAT\n"));
 		
-		// Error: C at index 14 replaced with A.
-		reads.add(new Text("CCCTTTCTGTTGACACATCATTGTTTAGTAAC"));
-		reads.add(new Text("CCGCGGGATGCC\n"));
-		// Error: C at index 25 omitted.
-		reads.add(new Text("TGGCAGACCCGCGGGACGATCTCCTTGACCCATCATCGAAATTCC\n"));
-
+		reads.add(new Text("AATTCGGCCTTCG\n"));
+		reads.add(new Text("GCAT\n"));
 		
-		reads.add(new Text("CCCTTTCTGTTGACCCATCATTGTTTAGTAACCCGCGGGATGCCTG\n"));
-		// Error: G at index 10 replaced with T.
-		reads.add(new Text("GCAGACCCGCTGGACGA\n"));
-		reads.add(new Text("TCTCCTCTGACCCATCATCGAAATTCC\n"));
-
 		
-		reads.add(new Text("CCCTTTCTGTTGACCCATCATTGTTTAGTAACCCGCGGGATGC"));
-		// Error: final G omitted.
-		reads.add(new Text("CTGGCAGACCCGC\n"));
-		reads.add(new Text("GGACGATCTCCTCT\n"));
-		// Error: CG at index 10 transposed to GC
-		reads.add(new Text("GACCCATCATCGAAATTCC\n"));
+		/*reads.add(new Text("ATTTGCCGA\n"));
+		reads.add(new Text("CGAAAGC\n"));
+		reads.add(new Text("GCTT\n"));
+		reads.add(new Text("ATTTGC\n"));
+		reads.add(new Text("CGACGAA\n"));
+		reads.add(new Text("AGCGCT\n"));
+		reads.add(new Text("ATTTGC\n"));
+		reads.add(new Text("CGACGAAA\n"));
+		reads.add(new Text("GCGCTT\n"));*/
 
 		FSDataOutputStream out = fileSystem.create(path);
 		for (Text read : reads) {
@@ -122,11 +97,21 @@ public class MRAssemblerTest2 {
 		
 		fileSystem.close();
 	}
-
+	
 	private static void verifyTest(Configuration conf) throws IOException {
 		FileSystem fileSystem = FileSystem.get(conf);
 		FSDataInputStream output = fileSystem.open(new Path(testOutput));
 		BufferedReader reader = new BufferedReader(new InputStreamReader(output));
+
+		String actual = reader.readLine();
+		final String expected = "AATTCGGCCTTCGGCAT";
+		
+		System.out.println(actual);
+		
+		//if (!actual.equals(expected))
+			//throw new IOException("Test failed with incorrect result: " + actual);
+		
+		reader.close();
 		
 		System.out.println("Test succeeded.");
 	}
@@ -140,8 +125,8 @@ public class MRAssemblerTest2 {
 		fileSystem.close();
 	}
 	
-	private static final int MER_LENGTH = 6;
-	private static final int COVERAGE = 5;
+	private static final int MER_LENGTH = 3;
+	private static final int COVERAGE = 3;
 
 	private static String testInput = new String("MRAssemblerTest_in.txt");
 	private static String testOutput = new String("MRAssemblerTest_out");

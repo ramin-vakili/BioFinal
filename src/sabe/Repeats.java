@@ -20,14 +20,14 @@
 // 
 // http://opensource.org/licenses/MIT
 
-package com.philiphubbard.sabe;
+package sabe;
 
 import java.lang.Math;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 
-import com.philiphubbard.digraph.BasicDigraph;
-import com.philiphubbard.digraph.StrongComponents;
+import digraph.BasicDigraph;
+import digraph.StrongComponents;
 
 // A class to clean up or rectify a digraph.BasicDigraph with edge multiples that 
 // represents Euler paths with repetitive sections, also known as "repeats".

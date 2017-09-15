@@ -27,10 +27,10 @@ import java.io.IOException;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.io.BytesWritable;
 
-import com.philiphubbard.digraph.MRVertex;
-import com.philiphubbard.sabe.MRMerVertex;
-import com.philiphubbard.sabe.Mer;
-import com.philiphubbard.sabe.MerString;
+import digraph.MRVertex;
+import sabe.MRMerVertex;
+import sabe.Mer;
+import sabe.MerString;
 
 public class MRMerVertexTest {
 

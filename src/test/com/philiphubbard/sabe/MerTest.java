@@ -22,7 +22,7 @@
 
 package test.com.philiphubbard.sabe;
 
-import com.philiphubbard.sabe.Mer;
+import sabe.Mer;
 
 // Confidence tests for the Mer class.
 // Uses assert(), so must be run with a run configuration that includes "-ea" in the 
