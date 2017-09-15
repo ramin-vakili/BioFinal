@@ -126,7 +126,7 @@ public class Assemble extends Thread {
 		onAssembleFinishListener = listener;
 	}
 	
-	public static final int COVERAGE = 6;
+	public static final int COVERAGE = 8;
 	private OnAssembleFinishListener onAssembleFinishListener;
 
 	private static String testInput = new String("MRAssemblerTest_in.txt");
