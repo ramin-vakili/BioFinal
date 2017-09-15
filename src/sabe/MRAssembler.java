@@ -142,7 +142,7 @@ public class MRAssembler {
 								+ iter);
 				if (onFinishListener != null) {
 					onFinishListener
-							.onProgress("sabe.MRAssembler starting compression iteration "
+							.onProgress("starting compression iteration "
 									+ iter);
 				}
 
@@ -205,7 +205,7 @@ public class MRAssembler {
 			throws IOException, InterruptedException {
 		System.out.println("sabe.MRAssembler starting graph construction");
 		if(onFinishListener != null){
-			onFinishListener.onProgress("sabe.MRAssembler starting graph construction");
+			onFinishListener.onProgress("starting graph construction");
 		}
 
 		ArrayList<MRMerVertex> vertices = new ArrayList<MRMerVertex>();
