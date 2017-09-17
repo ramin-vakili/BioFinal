@@ -3,10 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Ramin/Documents/NetBeansProjects/BioFinal/src/generate/SequenceHelper.java</file>
-            <file>file:/C:/Users/Ramin/Documents/NetBeansProjects/BioFinal/src/generate/Assemble.java</file>
-            <file>file:/C:/Users/Ramin/Documents/NetBeansProjects/BioFinal/src/generate/MRAssemblerTest2.java</file>
+            <file>file:/C:/Users/Ramin/Documents/NetBeansProjects/BioFinal/src/assemble/Assemble.java</file>
             <file>file:/C:/Users/Ramin/Documents/NetBeansProjects/BioFinal/src/ui/Form.java</file>
+            <file>file:/C:/Users/Ramin/Documents/NetBeansProjects/BioFinal/src/sabe/MRAssembler.java</file>
         </group>
     </open-files>
 </project-private>

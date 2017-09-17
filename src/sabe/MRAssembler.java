@@ -114,7 +114,7 @@ public class MRAssembler {
 
 			if (onFinishListener != null) {
 				onFinishListener
-						.onProgress("sabe.MRAssembler starting vertex construction");
+						.onProgress("starting vertex construction");
 			}
 
 			MRBuildMerVertices.setupJob(buildJob, buildInputPath,
@@ -150,7 +150,7 @@ public class MRAssembler {
 						compressInputPath, compressOutputPath);
 
 				if (!compressJob.waitForCompletion(true))
-					System.exit(1);
+					//System.exit(1);
 
 				iter++;
 				keepGoing = MRCompressChains.continueIteration(compressJob,
