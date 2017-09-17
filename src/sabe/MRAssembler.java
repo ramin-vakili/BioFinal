@@ -114,7 +114,7 @@ public class MRAssembler {
 
 			if (onFinishListener != null) {
 				onFinishListener
-						.onProgress("sabe.MRAssembler starting vertex construction");
+						.onProgress("starting vertex construction");
 			}
 
 			MRBuildMerVertices.setupJob(buildJob, buildInputPath,
@@ -142,7 +142,7 @@ public class MRAssembler {
 								+ iter);
 				if (onFinishListener != null) {
 					onFinishListener
-							.onProgress("sabe.MRAssembler starting compression iteration "
+							.onProgress("starting compression iteration "
 									+ iter);
 				}
 
@@ -150,7 +150,7 @@ public class MRAssembler {
 						compressInputPath, compressOutputPath);
 
 				if (!compressJob.waitForCompletion(true))
-					System.exit(1);
+					//System.exit(1);
 
 				iter++;
 				keepGoing = MRCompressChains.continueIteration(compressJob,
@@ -205,7 +205,7 @@ public class MRAssembler {
 			throws IOException, InterruptedException {
 		System.out.println("sabe.MRAssembler starting graph construction");
 		if(onFinishListener != null){
-			onFinishListener.onProgress("sabe.MRAssembler starting graph construction");
+			onFinishListener.onProgress("starting graph construction");
 		}
 
 		ArrayList<MRMerVertex> vertices = new ArrayList<MRMerVertex>();

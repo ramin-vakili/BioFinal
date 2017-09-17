@@ -16,3 +16,7 @@ sabe\.MRAssemblerTmp/
 MRAssemblerTest_in\.txt
 
 \.MRAssemblerTest_in\.txt\.crc
+
+\.MRAssemblerTest_out\.crc
+
+MRAssemblerTest_out
