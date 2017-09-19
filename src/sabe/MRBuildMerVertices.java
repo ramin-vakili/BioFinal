@@ -30,8 +30,8 @@ import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
 
-import digraph.MRBuildVertices;
-import digraph.MRVertex;
+import graph.MRBuildVertices;
+import graph.MRVertex;
 
 // A class derived from digraph.MRBuildVertices, specializing that class's
 // mapper to build instances of the MRMerVertex class, derived from MRVertex.

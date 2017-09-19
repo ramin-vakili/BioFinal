@@ -37,12 +37,12 @@ import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.SequenceFile;
 import org.apache.hadoop.mapreduce.Job;
 
-import digraph.BasicDigraph;
-import digraph.Digraph;
-import digraph.EulerPaths;
-import digraph.MRBuildVertices;
-import digraph.MRCompressChains;
-import digraph.MRVertex;
+import graph.BasicDigraph;
+import graph.Digraph;
+import graph.EulerPaths;
+import graph.MRBuildVertices;
+import graph.MRCompressChains;
+import graph.MRVertex;
 
 // A class to assemble genomic sequences from a list of "reads" using
 // MapReduce (MR) algorithms implemented in Hadoop to improve performance.

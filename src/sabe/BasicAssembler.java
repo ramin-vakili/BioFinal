@@ -25,9 +25,9 @@ package sabe;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 
-import digraph.BasicDigraph;
-import digraph.Digraph;
-import digraph.EulerPaths;
+import graph.BasicDigraph;
+import graph.Digraph;
+import graph.EulerPaths;
 
 // A class to assemble genomic sequences from a list of "reads".
 // The algorithm breaks each read string into substrings of length

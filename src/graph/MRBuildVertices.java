@@ -20,7 +20,7 @@
 // 
 // http://opensource.org/licenses/MIT
 
-package digraph;
+package graph;
 
 import java.io.IOException;
 import java.util.ArrayList;

@@ -20,7 +20,7 @@
 // 
 // http://opensource.org/licenses/MIT
 
-package digraph;
+package graph;
 
 import org.apache.hadoop.io.BytesWritable;
 

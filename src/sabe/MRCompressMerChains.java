@@ -29,8 +29,8 @@ import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.BytesWritable;
 import org.apache.hadoop.mapreduce.Job;
 
-import digraph.MRCompressChains;
-import digraph.MRVertex;
+import graph.MRCompressChains;
+import graph.MRVertex;
 
 // A class derived from digraph.MRCompressChains, specializing that class'
 // mapper and reducer to create instances of the MRMerVertex class, derived

@@ -26,8 +26,8 @@ import java.lang.Math;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 
-import digraph.BasicDigraph;
-import digraph.StrongComponents;
+import graph.BasicDigraph;
+import graph.StrongComponents;
 
 // A class to clean up or rectify a digraph.BasicDigraph with edge multiples that 
 // represents Euler paths with repetitive sections, also known as "repeats".
