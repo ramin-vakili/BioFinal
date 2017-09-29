@@ -6,7 +6,7 @@ by: Ramin Vakili
 
 ## Overview:
 
-A project to a assemble DNA sequences from a set of short fragments of the DNA sequence Which are called Reads, using Euler tour of the De Bruijn Graph.
+A project to assemble DNA sequences from a set of short fragments of the DNA sequence Which are called Reads, using Euler tour of the De Bruijn Graph.
 
 ## Dependencies:
 
