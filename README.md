@@ -11,7 +11,7 @@ A project to a assemble DNA sequences from a set of short fragments of the DNA s
 ## Dependencies:
 
 This project has been developed by NetBeans 8.2 and uses hadoop-2.6.5 for MapReduce Processing so Hadoop installation Jars must be added to the project libraries path. 
-First install Hadoop and then add all the jar files in folders listed below of Hadoop installation path:
+First install Hadoop and then add all the jar files in folders listed below in Hadoop installation path:
 
 \share\hadoop\common\lib\
 \share\hadoop\mapreduce\
